@@ -6,6 +6,13 @@ public class Player {
         //Todo name, age, worth(money), main sport and int image resource from drawable
         //Todo create constructor and getters and setters
         // use Android Studio for fast writing code, find Code->Generate
+    public void setall(String a, int b,int c,String d,int f){
+        name=a;
+        age=b;
+        worth=c;
+        mainSport=d;
+        image=f;
+    }
     private String name;
     private int age;
     private int worth;

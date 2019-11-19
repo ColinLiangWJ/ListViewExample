@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,14 @@ public class MyAdapter extends ArrayAdapter<Player> {
         //Todo get single player using position and listOfPlayers
         // get references to views in single_item.xml , for example
         //        TextView name = single_item_view.findViewById(R.id.name);
+        TextView name = single_item_view.findViewById(R.id.name);
+        name.setText(listOfPlayers.get(position).getName());
+        TextView age = single_item_view.findViewById(R.id.age);
+        age.setText(listOfPlayers.get(position).getage()+"");
+        TextView worth = single_item_view.findViewById(R.id.worth);
+        worth.setText(listOfPlayers.get(position).getWorth()+"");
+        TextView mainsport = single_item_view.findViewById(R.id.main_sport);
+        mainsport.setText(listOfPlayers.get(position).getMainsport());
         return  single_item_view;
     }
 }

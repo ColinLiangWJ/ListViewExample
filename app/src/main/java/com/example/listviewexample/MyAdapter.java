@@ -23,7 +23,9 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View con
+}
+vertView, @NonNull ViewGroup parent) {
         View single_item_view = convertView;
         //Using this inflated view, we can get the access to the various UI widgets present in the row item XML file.
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -43,5 +45,6 @@ public class MyAdapter extends ArrayAdapter<Player> {
         imageView=(ImageView)single_item_view.findViewById(R.id.pic);
         imageView.setImageResource(listOfPlayers.get(position).getImage());
         return  single_item_view;
+        
     }
 }

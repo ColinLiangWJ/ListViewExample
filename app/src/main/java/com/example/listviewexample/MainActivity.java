@@ -39,9 +39,11 @@ public class MainActivity extends AppCompatActivity  {
         String[] names={"11","22","33","44","55","66","77","88","99","1010","1111","1212","1313","1414","1515"};
         int[]age={11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
         int[]worth={10000,20000,30000,40000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000};
+        int[] image={R.drawable.beckham,R.drawable.curry,R.drawable.doinb,R.drawable.durent,R.drawable.faker,R.drawable.justin,R.drawable.lebron,R.drawable.li,R.drawable.miro,R.drawable.obama,R.drawable.the_shy,R.drawable.wuwukai};
         String []mainsport={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
         for(int i=0; i<10; i++){
             Player b=new Player (names[i],age[i],worth[i],mainsport[i],image[i]);
+
             list.add(b);
         }
         return null;

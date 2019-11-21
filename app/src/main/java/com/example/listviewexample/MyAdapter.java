@@ -5,15 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
-
 public class MyAdapter extends ArrayAdapter<Player> {
     List<Player> listOfPlayers;
+    ImageView imageView;
     public MyAdapter(@NonNull Context context, int resource, @NonNull List<Player> objects) {
         super(context, resource, objects);
         listOfPlayers = objects;
@@ -40,6 +42,8 @@ vertView, @NonNull ViewGroup parent) {
         worth.setText(listOfPlayers.get(position).getWorth()+"");
         TextView mainsport = single_item_view.findViewById(R.id.main_sport);
         mainsport.setText(listOfPlayers.get(position).getMainsport());
+        imageView=(ImageView)single_item_view.findViewById(R.id.pic);
+        imageView.setImageResource(listOfPlayers.get(position).getImage());
         return  single_item_view;
         
     }
